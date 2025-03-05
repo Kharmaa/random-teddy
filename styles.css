@@ -1,0 +1,590 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+body {
+  background-color: rgb(0, 0, 0);
+  margin: 0;
+  font-size: 16px;
+  height: 100vh;
+  overflow: hidden;
+}
+/*Vastauskenttä*/
+
+#answer {
+  font-family: "Ubuntu", serif;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  max-width: 500px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 100;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.button-custom {
+  font-family: "Ubuntu", serif;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  text-shadow: 2px 2px 35px rgb(151, 130, 255);
+  padding: 5px;
+  margin-top: 15px;
+  background-color: rgb(199, 188, 255);
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  box-shadow: 5px 5px 30px rgba(151, 130, 255, 0.3);
+  transition: 0.3s ease-in-out;
+}
+
+.button-custom:hover {
+  background-color: beige;
+  box-shadow: 5px 5px 30px rgba(151, 130, 255, 0.8);
+}
+
+/*Otsikkomuotoilut*/
+
+h1 {
+  font-family: "Raleway", serif;
+  font-weight: 300;
+  font-size: 5.5em;
+  line-height: 0.88;
+  z-index: 4;
+  color: rgb(226, 253, 255);
+  text-shadow: 2px 2px 35px rgb(151, 130, 255);
+}
+
+h2 {
+  font-family: "Open sans", sans-serif;
+  font-size: 2em;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  line-height: 1.1;
+  color: #ffffff;
+  text-shadow: 2px 2px 25px rgba(0, 0, 0, 0.9);
+  margin: 15px;
+}
+
+/*HEADER + parallaxheader*/
+
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgba(13, 1, 15, 1);
+}
+
+.parallaxhead {
+  pointer-events: none;
+  transition: 0.45s cubic-bezier(0.2, 0.49, 0.32, 0.99);
+  perspective: 1000px;
+}
+
+.bg-img {
+  position: absolute;
+  width: 100.6%;
+  top: 35.6%;
+  left: 50.39%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  overflow: hidden;
+}
+
+/*Bear Oraakkeli <33*/
+
+.head {
+  position: absolute;
+  top: 40.1%;
+  left: 50.8%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: rgba(142, 61, 218);
+  box-shadow: 5px 5px 30px rgba(151, 130, 255, 0.8);
+  z-index: 4;
+}
+
+.poski,
+.poski2 {
+  position: absolute;
+  top: 60.1%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  background-color: rgba(255, 191, 197, 0.5);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.poski {
+  left: 24.8%;
+}
+
+.poski2 {
+  left: 75.8%;
+}
+
+.eye,
+.eye2 {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 40.1%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  background-color: rgb(255, 191, 197);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.eye {
+  left: 65.8%;
+}
+
+.eye2 {
+  left: 33.8%;
+}
+
+.iris {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(20, 12, 28);
+  border-radius: 50%;
+  transition: transform 0.1s linear;
+}
+
+.eyelid {
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  top: -2px;
+  left: 0;
+  transform-origin: top;
+  background-color: rgb(65, 50, 79);
+  border-radius: 50px 50px 0 0;
+  animation: blink 8s ease-in-out infinite;
+  z-index: 20;
+}
+
+.eyelid-bottom {
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  bottom: 10px;
+  left: 0;
+  background-color: rgb(54, 41, 66);
+  border-radius: 0 0 50px 50px;
+  animation: blink-lower 8s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%,
+  92% {
+    height: 50%;
+  }
+  96% {
+    height: 100%;
+  }
+  100% {
+    height: 50%;
+  }
+}
+
+@keyframes blink-lower {
+  0%,
+  92% {
+    bottom: -5px;
+  }
+  96% {
+    bottom: 0;
+  }
+  100% {
+    bottom: -5px;
+  }
+}
+
+.nose {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 50%;
+}
+
+.nose::before {
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: rgba(220, 220, 220, 0.7);
+  box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+}
+
+.kuono {
+  position: absolute;
+  top: 69.1%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  background-color: rgb(144, 117, 176);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+}
+
+.mouth {
+  position: absolute;
+  top: 59%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 5px;
+  width: 100px;
+  background-color: transparent;
+  border-bottom: 5px solid black;
+  border-radius: 50%;
+  animation: mouth-open 8s ease-in-out 1;
+}
+
+@keyframes mouth-open {
+  0%,
+  100% {
+    height: 5px;
+    border-bottom-width: 5px;
+    border-radius: 50%;
+  }
+  50% {
+    height: 10px;
+    border-bottom-width: 10px;
+    border-radius: 0 0 50px 50px;
+  }
+}
+
+.ear {
+  position: absolute;
+  top: 17.1%;
+  left: 11.8%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background-color: rgb(142, 61, 218);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.ear:hover {
+  animation: ear-random 0.2s ease-in-out infinite alternate;
+}
+
+@keyframes ear-random {
+  0% {
+    transform: translate(-50%, -50%) translateY(0px);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(2px);
+  }
+}
+
+.ear2 {
+  position: absolute;
+  top: 17.1%;
+  left: 85.8%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background-color: rgb(142, 61, 218);
+  border-radius: 50%;
+}
+
+.ear2:hover {
+  animation: ear-random2 0.2s ease-in-out infinite alternate;
+}
+
+@keyframes ear-random2 {
+  0% {
+    transform: translate(-50%, -50%) translateY(0px);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(2px);
+  }
+}
+
+/*HEADER kuvat parallax*/
+
+.mandala {
+  position: absolute;
+  top: 40.1%;
+  left: 50.8%;
+  transform: translate(-50%, -50%);
+  width: 6.8%;
+  filter: drop-shadow(0px 0px 25px rgba(244, 255, 236, 0.9));
+  z-index: 8;
+}
+
+.sphere {
+  position: absolute;
+  top: 40.1%;
+  left: 50.8%;
+  transform: translate(-50%, -50%);
+  width: 14.1%;
+  filter: drop-shadow(0px 0px 28px rgba(10, 201, 222, 0.9));
+  z-index: 5;
+}
+
+.astrology {
+  position: absolute;
+  top: 40.1%;
+  left: 50.8%;
+  transform: translate(-50%, -50%);
+  width: 40.1%;
+  filter: drop-shadow(0px 0px 28px rgba(66, 160, 200, 0.9));
+  z-index: 2;
+}
+
+/*Header Otsikko*/
+
+.overlay-center {
+  position: absolute;
+  text-align: center;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 13;
+}
+
+/*Kysymyslaatikko*/
+
+.question-box {
+  position: absolute;
+  margin: 100px auto;
+  text-align: center;
+  left: 50%;
+  bottom: 2%;
+  transform: translateX(-50%);
+  padding: 20px;
+  width: 90%;
+  max-width: 800px;
+  background-color: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(10px);
+  border-radius: 35px;
+  box-shadow: 0 2px 14px rgba(36, 32, 59, 0.4);
+  border-left: 3px solid #d772df3a;
+  border-right: 3px solid #d772df3a;
+  z-index: 50;
+}
+
+.question-box input[type="text"] {
+  color: #ffffff;
+  font-size: 16px;
+  width: 95%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(62, 62, 62, 0.4);
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.question-box input[type="text"]:hover {
+  background-color: rgba(103, 103, 103, 0.6);
+}
+
+.question-box input[type="text"]:focus {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #d772df3a;
+  box-shadow: 0 0 10px rgba(204, 81, 231, 0.7);
+}
+
+@media screen and (max-width: 700px) {
+  .astrology {
+    width: 100%;
+  }
+}
+
+/*EasterEggit*/
+
+/*Ohjeet*/
+
+.ohje-box {
+  position: absolute;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: aliceblue;
+  text-shadow: 2px 2px 15px rgba(255, 230, 230, 0.8);
+  top: 45%;
+  left: 31%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  filter: drop-shadow(0px 0px 28px rgba(197, 255, 171, 0.9));
+  z-index: 22;
+}
+
+#ohjeet.show {
+  opacity: 1;
+}
+
+/*Random kuva*/
+
+.hiddenElement {
+  position: static;
+  width: 100%;
+  height: auto;
+  z-index: 32;
+}
+
+#kuva {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  width: 20%;
+  border-radius: 15px;
+  filter: drop-shadow(0px 0px 28px rgba(0, 0, 0, 0.9));
+  z-index: 22;
+}
+
+#kuva.show {
+  opacity: 1;
+}
+
+/*Reggae Egg*/
+
+#fourTwenty {
+  position: absolute;
+  top: 45%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  width: 100%;
+  filter: drop-shadow(0px 0px 28px rgba(197, 255, 171, 0.9));
+  z-index: 22;
+}
+
+#fourTwenty.show {
+  opacity: 1;
+}
+
+#right {
+  position: absolute;
+  top: 40%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  width: 280px;
+}
+
+#left {
+  position: absolute;
+  top: 45%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  width: 280px;
+}
+
+.spin {
+  animation: spin 15s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(1260deg);
+  }
+}
+
+#smooth {
+  position: relative;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 220px;
+}
+
+/*Terminator*/
+
+.arska {
+  position: absolute;
+  top: 45%;
+  left: 51%;
+  transform: translate(-50%, -100%);
+}
+
+@keyframes move {
+  from {
+    transform: translate(-50%, 100%);
+  }
+  to {
+    transform: translate(-50%, -100%);
+  }
+}
+
+#terminator {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  width: 50%;
+  filter: drop-shadow(0px 0px 28px rgba(37, 0, 6, 0.9));
+  z-index: 22;
+}
+
+#terminator.show {
+  opacity: 1;
+  animation: move 8s linear;
+}
+
+/*NemotheGod*/
+
+.mosh {
+  position: absolute;
+  top: 35%;
+  left: 71%;
+  transform: translate(-50%, -50%);
+  z-index: 42;
+}
+
+@keyframes moshing {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-25deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+#nemofish {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  width: 70%;
+  filter: drop-shadow(0px 0px 28px rgba(37, 0, 6, 0.9));
+  z-index: 42;
+}
+
+#nemofish.show {
+  opacity: 1;
+  animation: moshing 1s linear infinite;
+}

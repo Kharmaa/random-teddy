@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>feel free</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="hero-container">
+        <div class="head">
+          <div class="eye">
+            <div class="eyelid"></div>
+            <div class="iris"></div>
+            <div class="eyelid-bottom"></div>
+          </div>
+          <div class="eye eye2">
+            <div class="eyelid"></div>
+            <div class="iris"></div>
+            <div class="eyelid-bottom"></div>
+          </div>
+
+          <div class="poski"></div>
+          <div class="poski2"></div>
+
+          <div class="kuono">
+            <div class="nose"></div>
+            <div class="mouth"></div>
+          </div>
+
+          <div class="ear"></div>
+          <div class="ear2"></div>
+        </div>
+
+        <img
+          src="/kuvat/Tausta_Universe.webp"
+          alt="Background"
+          class="parallaxhead bg-img"
+          data-speedx="0.001"
+          data-speedy="0.0038"
+        />
+
+        <img
+          src="/kuvat/zodiac.png"
+          alt="Astrology"
+          class="parallaxhead astrology"
+          data-speedx="0.02"
+          data-speedy="0.030"
+        />
+      </div>
+
+      <div
+        class="overlay-center text parallaxhead"
+        data-speedx="0.002"
+        data-speedy="0.0030"
+      >
+        <h1>feel free</h1>
+      </div>
+      <div class="hiddenElement">
+        <img id="kuva" src="https://picsum.photos/200" alt="Salainen kuva" />
+        <img
+          id="terminator"
+          class="arska"
+          src="/kuvat/TERMINATOR.webp"
+          alt="terminator"
+        />
+        <div class="mosh">
+          <img id="nemofish" src="./kuvat/Nemo.webp" alt="Salainen kuva" />
+        </div>
+      </div>
+
+      <div id="fourTwenty">
+        <img
+          id="right"
+          class="spin"
+          src="./kuvat/peace.webp"
+          alt="Salainen kuva"
+        />
+        <img
+          id="left"
+          class="spin"
+          src="./kuvat/peace.webp"
+          alt="Salainen kuva"
+        />
+        <img
+          id="smooth"
+          class="center"
+          src="./kuvat/glasses.webp"
+          alt="Salainen kuva"
+        />
+      </div>
+
+      <div class="ohje-box" id="ohjeet">
+        <h3>Ohjeet:</h3>
+        <ol>
+          <li>Ei ole ohjeita</li>
+          <li>Lue 1. ohje</li>
+          <li>Good Luck!</li>
+        </ol>
+      </div>
+
+      <div class="question-box">
+        <div class="container">
+          <label for="question"><h2>Aseta sanasi:</h2></label>
+          <input type="text" id="question" placeholder="......" />
+          <button id="enterBtn" class="button-custom" onclick="askQuestion()">
+            Send
+          </button>
+        </div>
+      </div>
+
+      <div id="answer"></div>
+    </header>
+    <script src="/javascript/bear.js"></script>
+    <script src="/javascript/parallax.js"></script>
+    <script src="/javascript/script.js"></script>
+  </body>
+</html>
