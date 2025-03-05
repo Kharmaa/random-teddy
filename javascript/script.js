@@ -797,12 +797,12 @@ const EASTER_EGG = {
         HIGH_ELEMENTTI.classList.add("show");
 
         const MUSIIKKI_SOITIN = [
-          "/music/dj.mp3",
-          "/music/dj2.mp3",
-          "/music/electroreggae.mp3",
-          "/music/rapbeats.mp3",
-          "/music/reggae.mp3",
-          "/music/heavymetal.mp3",
+          "../music/dj.mp3",
+          "../music/dj2.mp3",
+          "../music/electroreggae.mp3",
+          "../music/rapbeats.mp3",
+          "../music/reggae.mp3",
+          "../music/heavymetal.mp3",
         ];
 
         let MUSIIKKI = new Audio(satunnainenVastaus(MUSIIKKI_SOITIN));
@@ -838,7 +838,7 @@ const EASTER_EGG = {
       const NEMO_ELEMENTTI = document.getElementById("nemofish");
       NEMO_ELEMENTTI.classList.add("show");
 
-      let MUSIIKKI = new Audio("/music/heavymetal.mp3");
+      let MUSIIKKI = new Audio("../music/heavymetal.mp3");
       MUSIIKKI.play();
 
       setTimeout(() => {
