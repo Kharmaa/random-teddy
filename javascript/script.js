@@ -1,6 +1,5 @@
 //boring..
 //The questions you are looking for..
-
 const VASTAUS_PANKKI = {
   "päivä tänään, mikä päivä tänään, monesko päivä tänään, mikä päivä, monesko päivä":
     {
@@ -971,7 +970,6 @@ function showAnswer(answer) {
   }
 
   //I want that response shows up random place and be there just for a short time..
-
   setRandomPosition(ANSWER_ELEMENT);
 
   ANSWER_ELEMENT.textContent = answer;

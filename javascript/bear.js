@@ -1,5 +1,4 @@
 //This bear needs some movements,, right..!?
-
 function restartAnimation() {
   let mouth = document.querySelector(".mouth");
   mouth.style.animation = "none";

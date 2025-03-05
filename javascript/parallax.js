@@ -1,5 +1,4 @@
 //Parallaxheader
-
 const parallax_el = document.querySelectorAll(".parallaxhead");
 
 //Muuttujiin
